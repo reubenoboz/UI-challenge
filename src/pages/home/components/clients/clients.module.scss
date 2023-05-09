@@ -7,6 +7,7 @@
   background-color: $bg_primary;
   @media screen and (max-width: 640px) {
     display: block;
+    padding: 3rem 2rem;
   }
   .text {
     margin-right: 2rem;
@@ -21,5 +22,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+    @media screen and (max-width: 640px) {
+      justify-content: space-around;
+    }
   }
 }

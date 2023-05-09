@@ -4,6 +4,9 @@
   padding: 5rem 7rem 10rem 7rem;
   text-align: center;
   background-color: #ffffff;
+  @media only screen and (max-width: 1024px) {
+    padding: 5rem 2rem 10rem 2rem;
+  }
 
   .title {
     color: $text_primary;

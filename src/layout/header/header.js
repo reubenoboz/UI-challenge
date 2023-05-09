@@ -5,6 +5,13 @@ import Navlinks from "components/navlinks";
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleMobileMenuClick = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
+
+  console.log(showMobileMenu);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +40,10 @@ const Header = () => {
           <Navlinks path="#" name="About Us" />
           <Navlinks path="#" name="Contact" />
         </div>
-        <div className={`${styles.hamburger} hamburger`}>
+        <div
+          className={`${styles.hamburger} hamburger`}
+          onClick={handleMobileMenuClick}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -41,6 +51,34 @@ const Header = () => {
       </nav>
 
       <hr />
+
+      {/* Mobile menu */}
+      <div
+        className={`${styles.overlay} ${
+          showMobileMenu ? styles.show : styles.hidden
+        }`}
+      >
+        <div>
+          <nav className={styles.nav}>
+            <div className={styles.logo}>
+              <Logo />
+            </div>
+            <div
+              className={`${styles.hamburger} hamburger`}
+              onClick={handleMobileMenuClick}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+        </div>
+        <div className={styles.mobileMenu} onClick={handleMobileMenuClick}>
+          <Navlinks path="/" name="Product" />
+          <Navlinks path="#" name="About Us" />
+          <Navlinks path="#" name="Contact" />
+        </div>
+      </div>
     </header>
   );
 };
