@@ -1,0 +1,80 @@
+@import "../../../../styles/variables";
+.bannerWrapper {
+  background-image: url("../../../../assets/images/banner-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 130vh;
+  position: relative;
+  @media only screen and (max-width: 1024px) {
+    min-height: 100vh;
+  }
+
+  @media only screen and (max-width: 640px) {
+    min-height: 60vh;
+  }
+
+  .bannerMessage {
+    width: 32%;
+    position: absolute;
+    top: 35%;
+    right: 7rem;
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+    .bannerTitle {
+      padding: 0;
+      margin: 0;
+      line-height: 4rem;
+      font-size: 3rem;
+      font-weight: 500;
+      span {
+        color: $text_primary;
+      }
+    }
+    .bannerText {
+      line-height: 2rem;
+      margin-top: 1rem;
+    }
+    .bannerAction {
+      margin-top: 2.5rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.mobilebBannerMessage {
+  display: none;
+  @media only screen and (max-width: 1024px) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 7rem 25%;
+  }
+  @media only screen and (max-width: 640px) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 7rem 7rem;
+  }
+  .bannerTitle {
+    padding: 0;
+    margin: 0;
+    line-height: 4rem;
+    font-size: 3rem;
+    font-weight: 500;
+    span {
+      color: $text_primary;
+    }
+  }
+  .bannerText {
+    line-height: 2rem;
+    margin-top: 2rem;
+  }
+  .bannerAction {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+}

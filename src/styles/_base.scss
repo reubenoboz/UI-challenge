@@ -1,0 +1,83 @@
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(0.4em + 0.5vw);
+  @media only screen and (max-width: 1024px) {
+    font-size: calc(0.55em + 0.5vw);
+  }
+  @media only screen and (max-width: 640px) {
+    font-size: calc(0.7em + 0.5vw);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: $text_black;
+  overflow-x: hidden;
+  background-color: $bg_primary;
+  font-size: 1.2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.links {
+  text-decoration: underline;
+  color: $text_primary;
+}
+
+.horizontal_line {
+  border: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  height: 18px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}

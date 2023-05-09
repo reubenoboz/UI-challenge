@@ -1,0 +1,14 @@
+@import "styles/variables";
+
+.navlink {
+  color: $text_black;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.active {
+  color: $text_primary !important;
+  border-bottom: 2px solid $text_primary;
+}

@@ -1,0 +1,91 @@
+@import "../../styles/variables";
+
+.footerWrapper {
+  color: $text_gray;
+  padding: 5rem 7rem;
+  .footerLinksContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 2.5rem;
+    @media only screen and (max-width: 1024px) {
+      display: block;
+    }
+    .box1 {
+      width: 30%;
+
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 5rem;
+      }
+    }
+    .box2 {
+      width: 20%;
+
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 5rem;
+      }
+    }
+    .box3 {
+      width: 20%;
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 5rem;
+      }
+    }
+    .box4 {
+      width: 30%;
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 5rem;
+        width: 100%;
+      }
+      .learnMore {
+        color: $text_primary;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      form {
+        display: flex;
+        margin-top: 2rem;
+        input[type="email"] {
+          width: 65%;
+          padding: 1rem;
+          border: 1px solid #bbbbbb;
+          border-radius: 5px 0px 0px 5px;
+        }
+        input[type="submit"] {
+          width: 35%;
+          background-color: $text_primary;
+          padding: 1rem;
+          color: $text_white;
+          border: none;
+          outline: none;
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
+    }
+    .title {
+      font-weight: 700;
+      color: $text_black;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .copyright {
+    color: #adadad;
+    padding: 5rem 0 2rem 0;
+    font-size: small;
+    .gravii {
+      color: $text_primary;
+    }
+    .ng {
+      color: #343434;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../styles/variables";
+
+.featuresWrapper {
+  padding: 5rem 7rem 10rem 7rem;
+  text-align: center;
+  background-color: #ffffff;
+
+  .title {
+    color: $text_primary;
+    font-size: 1.3rem;
+  }
+  .heading {
+    font-size: 3rem;
+    color: $text_black_alt;
+    margin-top: 1rem;
+  }
+  .feature {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+
+    @media only screen and (max-width: 1024px) {
+      display: block;
+    }
+    .featureItem {
+      width: 23%;
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        margin-top: 6rem;
+      }
+      .featureItemTitle {
+        margin-top: 2rem;
+        font-weight: 700;
+      }
+      .featureItemBody {
+        margin-top: 2rem;
+        line-height: 2rem;
+        color: $text_gray;
+      }
+      .learnMoreWrapper {
+        margin-top: 3rem;
+        .learnMore {
+          text-decoration: none;
+          color: $text_black;
+          &:hover {
+            color: $text_primary;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
